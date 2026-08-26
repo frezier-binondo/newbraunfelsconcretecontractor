@@ -51,13 +51,27 @@ img {
 }
 
 a {
-  color: var(--color-navy);
-  text-decoration: none;
+  color: #C2410C;
+  text-decoration: underline;
+  text-underline-offset: 2px;
   transition: var(--transition);
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-accent-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* Keep nav, logo, buttons, footer from inheriting body link underline */
+.nav-link,
+.logo,
+.btn,
+.dropdown a,
+.footer-col a,
+.footer-legal a,
+.phone-link,
+.header-cta a {
+  text-decoration: none;
 }
 
 ul, ol {
@@ -970,4 +984,34 @@ p {
   .btn-lg {
     width: 100%;
   }
+}
+
+/* Related Services & Areas – standout links matching CTA accent */
+.related-links-section a {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition);
+}
+.related-links-section a:hover {
+  color: var(--color-accent-hover);
+  text-decoration-thickness: 2px;
+}
+.related-links-section ul {
+  list-style: disc;
+  margin: 0 0 1.25rem 1.25rem;
+  color: #4B5563;
+}
+.related-links-section li {
+  margin-bottom: 0.5rem;
+}
+.related-links-section .external-link-note {
+  font-size: 0.95rem;
+  color: #6B7280;
+  margin: 0;
+}
+.related-links-section .external-link-note a {
+  color: var(--color-accent);
+  font-weight: 600;
 }
